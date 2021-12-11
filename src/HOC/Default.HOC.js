@@ -2,7 +2,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 //Layouts
-import DefaultLayout from "../layouts/Default.layout";
+import DefaultLayout from "../layouts/Default.layouts";
 
 const DefaultHOC = ({ component: Component , ...rest }) => {
   return (
