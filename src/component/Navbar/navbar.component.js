@@ -7,7 +7,7 @@ const NavSm = () => {
    <div>
       <h3 className="text-xl font-bold">It All Starts Here!</h3>
       <span className="text-gray-400 text-xs flex items-center">
-         Bhubaneswar
+         Jalandhar
          <BiChevronRight />
       </span>
    </div>
@@ -32,7 +32,11 @@ const NavMd = () => {
     </>
   );
 };
-const NavLg = () => {};
+const NavLg = () => {
+  <>
+  
+  </>
+};
 
 const Navbar = () => {
   return (
@@ -44,7 +48,8 @@ const Navbar = () => {
         <div className="hidden md:flex lg:hidden">{/*Tablet Screen*/}
           <NavMd />
         </div>
-        <div className="hidden lg:flex">{/*Large Screen*/}</div>
+        <div className="hidden lg:flex">{/*Large Screen*/}
+        </div>
      </nav>
     </>
   );
