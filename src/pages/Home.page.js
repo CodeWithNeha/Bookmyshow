@@ -1,9 +1,19 @@
-import React from "react";
-
+import React,{useState, useEffect} from "react";
+import axios from "axios";
 //components
 import EntertainmentCardSlider from "../component/Entertainment/Entertainmentcard.component";
 import Premier from "../component/Premier/Premier.component";
 const HomePage = () => {
+  const [popularMovies, setPopularMovies] = useState([]);
+      useEffect(()=> {
+        const requestPopularMovies = async () => {
+          const getPopularMovies = await axios.get("/movie/popular");
+          setPopularMovies(getPopularMovies.data.results);
+        };
+        requestPopularMovies();
+      },[]);
+
+      console.log({popularMovies});
   return (
     <>
     <div className="flex flex-col gap-9">
